@@ -52,7 +52,6 @@ rm -f %{buildroot}%{_infodir}/dir
 %docs_package
 
 %files
-%endif
 %defattr(-, root, root)
 %{_bindir}/tar
 %doc COPYING
