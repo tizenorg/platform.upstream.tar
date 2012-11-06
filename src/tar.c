@@ -2467,10 +2467,14 @@ decode_options (int argc, char **argv)
 
   /* Flags for accessing files to be read from or copied into.  POSIX says
      O_NONBLOCK has unspecified effect on most types of files, but in
-     practice it never harms and sometimes helps.  */
+     practice it never harms and sometimes helps.
+
+     It seems in fact that in practice it never helps and sometimes harms.
+     Removing again.
+   */
   {
     int base_open_flags =
-      (O_BINARY | O_CLOEXEC | O_NOCTTY | O_NONBLOCK
+      (O_BINARY | O_CLOEXEC | O_NOCTTY
        | (dereference_option ? 0 : O_NOFOLLOW)
        | (atime_preserve_option == system_atime_preserve ? O_NOATIME : 0));
     open_read_flags = O_RDONLY | base_open_flags;
