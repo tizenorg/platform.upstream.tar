@@ -17,8 +17,6 @@ into this package. If you are planning to use the remote tape features
 provided by tar you have to also install the 'dump' or the 'star'
 package.
 
-%{?lang_package}
-
 %prep
 %setup -q
 
