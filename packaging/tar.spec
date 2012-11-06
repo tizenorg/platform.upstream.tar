@@ -6,11 +6,6 @@ License:        GPL-3.0+
 Group:          System/Base
 Url:            http://www.gnu.org/software/tar/
 Source0:        %{name}-%{version}.tar.bz2
-#
-Patch3:         tar-wildcards.patch
-Patch6:         tar-backup-spec-fix-paths.patch
-Patch7:         tar-1.26-remove_O_NONBLOCK.patch
-Patch8:         tar-1.26-stdio.in.patch
 BuildRequires:  help2man
 Recommends:     xz
 
@@ -26,10 +21,6 @@ package.
 
 %prep
 %setup -q
-%patch3 -p1
-%patch6 -p1
-%patch7 -p1
-%patch8 -p1
 
 %build
 %define my_cflags -W -Wall -Wpointer-arith -Wstrict-prototypes -Wformat-security -Wno-unused-parameter
