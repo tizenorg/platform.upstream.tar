@@ -55,7 +55,6 @@ rm -f %{buildroot}%{_infodir}/dir
 %manifest %{name}.manifest
 %defattr(-, root, root)
 %{_bindir}/tar
-%doc COPYING
-%{_mandir}/man1/tar.1.gz
+%license COPYING
 
 %changelog
