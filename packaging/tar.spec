@@ -1,9 +1,9 @@
 Name:           tar
-Version:        1.26
+Version:        1.27
 Release:        0
 Summary:        GNU implementation of tar ((t)ape (ar)chiver)
 License:        GPL-3.0+
-Group:          System/Base
+Group:          System/Utilities
 Url:            http://www.gnu.org/software/tar/
 Source0:        %{name}-%{version}.tar.bz2
 Source1001: 	tar.manifest
@@ -56,5 +56,3 @@ rm -f %{buildroot}%{_infodir}/dir
 %defattr(-, root, root)
 %{_bindir}/tar
 %license COPYING
-
-%changelog
